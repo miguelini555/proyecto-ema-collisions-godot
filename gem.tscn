@@ -10,6 +10,10 @@ signal gem_collected
 func _on_body_entered(body: Node2D) -> void:
 	gem_collected.emit()
 	queue_free()
+
+
+func _on_gem_collected() -> void:
+	pass # Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
@@ -17,6 +21,7 @@ size = Vector2(43.5, 40)
 
 [sub_resource type="Animation" id="Animation_edvqy"]
 resource_name = "Default"
+loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
