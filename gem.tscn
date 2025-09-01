@@ -5,15 +5,11 @@
 [sub_resource type="GDScript" id="GDScript_whk3i"]
 script/source = "extends Area2D
 
-signal gem_collected
+signal collected
 
 func _on_body_entered(body: Node2D) -> void:
-	gem_collected.emit()
+	collected.emit()
 	queue_free()
-
-
-func _on_gem_collected() -> void:
-	pass # Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
